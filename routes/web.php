@@ -21,27 +21,27 @@ use Illuminate\Support\Facades\Route;
 
 /* -------------------------------------------------------------------------- */
 
-Route::get('/', [HomeController::class, "home"]);
+Route::get('/', [HomeController::class, "home"])->name('home');
 
 Route::get('/contact/sav', function () {
     return view('infos/contact/sav');
-});
+})->name("sav");
 
 Route::get('/contact/partenariat', function () {
     return view('infos/contact/partenariat');
-});
+})->name('partenariat');
 
 Route::get('/contact/info', function () {
     return view('infos/contact/info');
-});
+})->name('info');
 
 Route::get('/team/front', function () {
     return view('team/web/dev/frontend');
-});
+})->name('frontend');
 
 Route::get('/team/back', function () {
     return view('team/web/dev/backend');
-});
+})->name('backend');
 
 view()->composer(["*"], function($view) {
     $back = [

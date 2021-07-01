@@ -19,22 +19,22 @@
             <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
                 <ul class="navbar-nav">
                     <li class="nav-item">
-                        <a class="nav-link" href="/">Home</a>
+                        <a class="nav-link" href={{Route("home")}}>Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="/contact/sav">S.A.V</a>
+                        <a class="nav-link" href={{Route('sav')}}>S.A.V</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="/contact/partenariat">Partenariat</a>
+                        <a class="nav-link" href={{Route('partenariat')}}>Partenariat</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="/contact/info">Informations</a>
+                        <a class="nav-link" href={{Route('info')}}>Informations</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="/team/front">Frontend </a>
+                        <a class="nav-link" href={{Route('frontend')}}>Frontend </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="/team/back">Backend</a>
+                        <a class="nav-link" href={{Route('backend')}}>Backend</a>
                     </li>
                 </ul>
             </div>
