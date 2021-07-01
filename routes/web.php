@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\HomeController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -20,9 +21,7 @@ use Illuminate\Support\Facades\Route;
 
 /* -------------------------------------------------------------------------- */
 
-Route::get('/', function () {
-    return view('home');
-});
+Route::get('/', [HomeController::class, "home"]);
 
 Route::get('/contact/sav', function () {
     return view('infos/contact/sav');
@@ -44,7 +43,7 @@ Route::get('/team/back', function () {
     return view('team/web/dev/backend');
 });
 
-view()->composer(["front", "back", "home"], function($view) {
+view()->composer(["*"], function($view) {
     $back = [
         'personne1' => [
             "nom" => 'Junior',
